@@ -4,28 +4,21 @@
     "appVersionSource": "remote"
   },
   "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
     "preview": {
       "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:clean :app:assembleRelease"
+        "buildType": "apk"
       },
-      "channel": "preview"
-    },
-    "preview2": {
-      "android": {
-        "gradleCommand": ":app:assembleRelease"
-      },
-      "channel": "preview2"
-    },
-    "preview3": {
-      "developmentClient": true,
-      "channel": "preview3"
-    },
-    "preview4": {
-      "distribution": "internal",
-      "channel": "preview4"
+      "distribution": "internal"
     },
     "production": {
+      "android": {
+        "buildType": "apk",
+        "image": "latest"
+      },
       "channel": "production"
     }
   },

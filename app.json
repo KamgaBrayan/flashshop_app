@@ -25,6 +25,12 @@
       "edgeToEdgeEnabled": true,
       "permissions": [
         "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
         "android.permission.CAMERA"
       ],
       "package": "com.flashshop.app",
@@ -54,9 +60,15 @@
     "experiments": {
       "typedRoutes": false
     },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/b3858588-4974-4cfa-aee2-50cf56c35de2"
+    },
     "extra": {
       "eas": {
-        "projectId": "5900fad0-f2ba-4374-bad9-980c018b1bc5"
+        "projectId": "b3858588-4974-4cfa-aee2-50cf56c35de2"
       }
     }
   }
