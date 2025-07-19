@@ -96,7 +96,7 @@ const authYowyobService = {
       console.log('Tentative de connexion avec:', credentials);
       
       // Utilisation du préfixe /api/
-      const response = await axios.post(`${AUTH_SERVICE_PREFIX}/api/login`, credentials, {
+      const response = await axios.post(`${AUTH_SERVICE_BASE_URL}/api/login`, credentials, {
         headers: {
           // On définit MANUELLEMENT le token d'application
           'Authorization': `Bearer ${appToken}` 
@@ -134,7 +134,7 @@ const authYowyobService = {
   getCurrentUser: async () => {
     try {
       // Pas besoin de définir le header Authorization ici, l'intercepteur le fera pour nous !
-      const response = await axios.get(`${AUTH_SERVICE_PREFIX}/api/user`);
+      const response = await axios.get(`${AUTH_SERVICE_BASE_URL}/api/user`);
       return response.data;
     } catch (error) {
       console.error('Get current user error:', error.response?.data || error.message);
@@ -149,7 +149,7 @@ const authYowyobService = {
   updateProfile: async (profileData) => {
     try {
       // Pas besoin de définir le header Authorization, l'intercepteur le fera.
-      const response = await axios.put(`${AUTH_SERVICE_PREFIX}/api/update-profile`, profileData);
+      const response = await axios.put(`${AUTH_SERVICE_BASE_URL}/api/update-profile`, profileData);
       return response.data;
     } catch (error) {
       console.error('Update profile error:', error.response?.data || error.message);
